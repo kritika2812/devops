@@ -1,0 +1,12 @@
+first create one new job in jenkins and go to the source management code 
+click on the git and paste your github url.
+next, go to the build triggers click on the poll SCM. 
+Now paste the following code into execute shell.
+if sudo docker ps | grep test_server
+then
+echo "Test server already running"
+else
+sudo docker run -d -t -i -p 8082:80 -v /testDir:/usr/local/apache2/htdocs/ --name test_server httpd
+fi
+sudo cp -r -v -f * /web1
+now just click on the apply and save
