@@ -1,0 +1,2 @@
+Basically , we integrate docker with jenkins,git bash
+In this, we have two environments testing and production. Both environments are identical coz we lauch this from docker image httpd.
